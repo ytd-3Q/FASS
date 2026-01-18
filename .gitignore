@@ -1,0 +1,47 @@
+# ---- FASS repo excludes ----
+/assets/models/
+/data/
+/fass_gateway/data/
+
+# Config/secrets (commit examples only)
+config.env
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Rust
+/memoscore/target/
+
+# Node / WebUI
+/webui/node_modules/
+/webui/dist/
+
+# Build outputs
+dist/
+build/
+
+# SQLite and runtime artifacts
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+
+# Logs
+*.log
+
+# IDE / tooling
+/.trae/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
