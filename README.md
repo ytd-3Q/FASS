@@ -1,5 +1,4 @@
-<div align="center">
-  <img src="docs/assets/logo.svg" width="128" alt="FASS Logo" />
+<div>
   <h1>FASS Hub</h1>
   <p>一个以 Hybrid-RAG 为内核的 AI 知识中枢与多 Provider 网关（OpenAI 兼容 / 工具链 / 自动化闭环）。</p>
 </div>
@@ -396,12 +395,9 @@ python -m uvicorn fass_gateway.app.main:app --host 0.0.0.0 --port 8000
 
 ## 7. 相关文档
 
-- 开发文档索引：[docs/INDEX.md](./docs/INDEX.md)
-- API 参考：[docs/API_REFERENCE.md](./docs/API_REFERENCE.md)
-- 结构树与后端逐文件索引：[docs/STRUCTURE_TREE.md](./docs/STRUCTURE_TREE.md)、[docs/BACKEND_FILE_INDEX.md](./docs/BACKEND_FILE_INDEX.md)
-- 实体机部署：[docs/DEPLOYMENT_BAREMETAL.md](./docs/DEPLOYMENT_BAREMETAL.md)
-- 技术白皮书：[docs/TECHNICAL_WHITEPAPER.md](./docs/TECHNICAL_WHITEPAPER.md)
+- 为最小化默认分支内容，`main` 分支当前仅保留 `README.md` 与 `.gitignore`。
+- 完整代码与完整文档请切换到 `code` 分支查看。
 
 ## 许可证
 
-本项目使用 MIT License，详见 [LICENSE](./LICENSE)。
+`main` 分支未提供 LICENSE 文件，请按项目需求补充。
