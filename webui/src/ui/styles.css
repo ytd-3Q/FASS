@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: #f0f7ff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 182, 193, 0.35), transparent 55%),
+    radial-gradient(circle at 85% 18%, rgba(135, 206, 235, 0.28), transparent 58%),
+    radial-gradient(circle at 50% 105%, rgba(248, 195, 205, 0.22), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+  background-size: auto, auto, auto, 180px 180px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#problems_and_diagnostics {
+  position: fixed !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  max-height: 40vh !important;
+  width: min(560px, calc(100vw - 24px)) !important;
+  overflow: auto !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+  border-radius: 16px !important;
+}
+
+#problems_and_diagnostics * {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    opacity: 0.02;
+  }
+}

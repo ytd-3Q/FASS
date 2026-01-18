@@ -1,0 +1,31 @@
+{
+  "id": "memory_writer",
+  "name": "Memory Writer",
+  "version": "0.1.0",
+  "runtime": {
+    "type": "stdio",
+    "command": ["python", "main.py"]
+  },
+  "tools": [
+    {
+      "name": "memory_writer",
+      "description": "Write a record to external memory and request upsert",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "content": { "type": "string" }
+        },
+        "required": ["path", "content"]
+      },
+      "postprocess": {
+        "memory_upsert": {
+          "collection": "external",
+          "path_field": "path",
+          "content_field": "content"
+        }
+      }
+    }
+  ]
+}
+
