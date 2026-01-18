@@ -1,0 +1,22 @@
+{
+  "id": "hello_tool",
+  "name": "Hello Tool",
+  "version": "0.1.0",
+  "runtime": {
+    "type": "stdio",
+    "command": ["python", "main.py"]
+  },
+  "tools": [
+    {
+      "name": "hello_tool",
+      "description": "Return a greeting and echo inputs",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" }
+        }
+      }
+    }
+  ]
+}
+

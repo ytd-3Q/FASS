@@ -1,0 +1,16 @@
+services:
+  fass:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fass_gateway/data:/app/fass_gateway/data
+      - ./fass_gateway/config.env:/app/config.env
+      - ./data:/app/data
+    restart: unless-stopped
+  searxng:
+    image: searxng/searxng:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
