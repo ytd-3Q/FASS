@@ -24,6 +24,9 @@ venv/
 /webui/node_modules/
 /webui/dist/
 
+# Optional: docs (exclude if you keep main minimal)
+/docs/
+
 # Build outputs
 dist/
 build/
